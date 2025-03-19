@@ -27,37 +27,41 @@ This project follows the tutorial:
    ```bash
    git clone https://github.com/your-username/momotox.git
    cd momotox
+   ```
    
 2. **Create a virtual environment (Optional but recommended)**  
-  ```bash
-  python -m venv venv
-  source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activa
+   ```
 
-3. **Install dependencies**
-  ```bash
-  pip install -r requirements.txt
+4. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. **Setup MySQL Database**
+5. **Setup MySQL Database**
   - Make sure you have MySQL installed and running.
   - Create a new database MomotoX (or modify the database name in the code as needed).
   - Run the required schema and stored procedures for the project. (This might include tables like orders, order_tracking, and stored procedures like insert_order_item.)
 
 ## 🚀 Running the FastAPI Webhook
 1. **Start FastAPI Server**
-  ```bash
-  uvicorn main:app --host 0.0.0.0 --port 8000
+   ```bash
+   uvicorn main:app --host 0.0.0.0 --port 8000
+   ```
 
-2. **Expose locally for Dialogflow testing**
+3. **Expose locally for Dialogflow testing**
   Use Ngrok to expose your local server:
-  ```bash
-  Copy
-  Edit
-  ngrok http 8000
+   ```bash
+   ngrok http 8000
+   ```
 
 3. **Set the Webhook URL in Dialogflow:**
   After exposing your server, set the URL in your Dialogflow webhook settings:
-  ```bash
-  https://your-ngrok-url/webhook
+   ```bash
+   https://your-ngrok-url/webhook
+   ```
 
 ## 🎯 Usage
   - Users interact with the chatbot through Dialogflow, sending intents like "order.add", "order.remove", and "order.complete".
